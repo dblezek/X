@@ -2,14 +2,10 @@
 /** @jsx React.DOM */
 var React = require('react');  // Browserify!
 
-
 String.prototype.trunc =
 function(n){
   return this.substr(0,n-1)+(this.length>n?'...':'');
 };
-
-
-
 
 // An item.  A MIDAS URL looks like this:
 /*
@@ -29,8 +25,9 @@ var MRMLItem = React.createClass({displayName: 'MRMLItem',
       if (this.isMounted() && result.data.bitstreams.length > 0) {
         // MIDAS download URL
         var midasURL = "http://slicer.kitware.com/midas3/rest/bitstream/download/" + result.data.bitstreams[0];
+        // var midasURL = "/midas3/rest/bitstream/download/" + result.data.bitstreams[0];
         // Need to tell the index page to open our MRB file
-        var url = "index.html?mrb=" + encodeURIComponent(midasURL) + "&token=" + encodeURIComponent(this.props.token);
+        var url = "index.html#mrb=" + encodeURIComponent(midasURL) + "&token=" + encodeURIComponent(this.props.token);
         this.setState({
           // hmm, bitstreams is an array?!?  take the first one, I suppose
           mrbURL: url
@@ -39,8 +36,8 @@ var MRMLItem = React.createClass({displayName: 'MRMLItem',
     }.bind(this));
   },
   render: function () {
-    console.log ( "MRMLItem.render", this.props, this.state)
-
+    console.log ( "MRMLItem.render", this.props, this.state);
+    /* jshint ignore:start */
     return (
       React.createElement("tr", {className: "MRMLItem"}, 
       React.createElement("td", null, 
@@ -56,6 +53,7 @@ var MRMLItem = React.createClass({displayName: 'MRMLItem',
         )
       )
     );
+    /* jshint ignore:end */
   }
 });
 

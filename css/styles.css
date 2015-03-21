@@ -58,7 +58,6 @@ body {
   padding: 30px;
 }
 
-
 /*
  * Header
  */
@@ -104,6 +103,12 @@ body {
   }
 }
 
+<<<<<<< HEAD
+=======
+.solid-background {
+	background: #111;
+}
+>>>>>>> Parse_binary_VTK_files
 
 /*
  * Cover
@@ -128,6 +133,31 @@ body {
   background-color: rgba(0,0,0,.25);
 }
 
+<<<<<<< HEAD
+=======
+
+/*
+ * Dataset Display
+ */
+
+.data-padding {
+  padding: 100px 20px !important;
+}
+.MRMLList {
+  text-align: left;
+}
+.MRMLItem td img {
+  padding: 10px 0;
+}
+.MRMLItem td:nth-child(2) {
+  padding-left: 20px;
+}
+tr.MRMLItem {
+  border-bottom: 1px solid #222;
+}
+
+
+>>>>>>> Parse_binary_VTK_files
 /*
  * Footer
  */
@@ -171,3 +201,7 @@ body {
     width: 700px;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Parse_binary_VTK_files
